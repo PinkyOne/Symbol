@@ -1,0 +1,9 @@
+C:\Users\Alex\Dropbox\comp_graphic\labCG3Turn3\labCG3Turn3\bin\Debug\labCG3Turn3.exe.config
+C:\Users\Alex\Dropbox\comp_graphic\labCG3Turn3\labCG3Turn3\obj\Debug\labCG3Turn3.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Dropbox\comp_graphic\labCG3Turn3\labCG3Turn3\obj\Debug\labCG3Turn3.Form1.resources
+C:\Users\Alex\Dropbox\comp_graphic\labCG3Turn3\labCG3Turn3\obj\Debug\labCG3Turn3.Properties.Resources.resources
+C:\Users\Alex\Dropbox\comp_graphic\labCG3Turn3\labCG3Turn3\obj\Debug\labCG3Turn3.csproj.GenerateResource.Cache
+C:\Users\Alex\Dropbox\comp_graphic\labCG3Turn3\labCG3Turn3\bin\Debug\labCG3Turn3.exe
+C:\Users\Alex\Dropbox\comp_graphic\labCG3Turn3\labCG3Turn3\bin\Debug\labCG3Turn3.pdb
+C:\Users\Alex\Dropbox\comp_graphic\labCG3Turn3\labCG3Turn3\obj\Debug\labCG3Turn3.exe
+C:\Users\Alex\Dropbox\comp_graphic\labCG3Turn3\labCG3Turn3\obj\Debug\labCG3Turn3.pdb
