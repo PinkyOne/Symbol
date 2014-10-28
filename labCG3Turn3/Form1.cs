@@ -12,6 +12,7 @@ namespace LabCG3Turn3
 
     public partial class Form1 : Form
     {
+        private static bool isDrawed = false;
         private readonly BezierCurve bezier;
         private readonly Marker[] markers = new Marker[4];
 
@@ -40,14 +41,24 @@ namespace LabCG3Turn3
         {
             e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
             Pen pen = new Pen(Color.Gray, 1f);
-            e.Graphics.DrawLines(pen, markers.Select(m => m.Location).ToArray());
-            foreach (Marker marker in markers)
+            // e.Graphics.DrawLines(pen, markers.Select(m => m.Location).ToArray());
+            /*foreach (Marker marker in markers)
             {
                 marker.Draw(e.Graphics);
-            }
-            bezier.Draw(e.Graphics);
+            }*/
 
+            bezier.Draw(e.Graphics);
+            Brezenham.BresenhamCircle(e.Graphics, Color.Black, 300 - 150 / 2, 200, 25);
+            Brezenham.BresenhamCircle(e.Graphics, Color.Black, 300 + 150 / 2, 200, 25);
             Brezenham.BresenhamCircle(e.Graphics, Color.Black, 300, 200, 150);
+
+            if (isDrawed)
+            {
+                Fill.Filling(e.Graphics, null, 300 - 150 / 2, 200);
+                Fill.Filling(e.Graphics, null, 300, 250);
+                Fill.Filling(e.Graphics, null, 320, 240);
+            }
+            isDrawed = false;
         }
 
         private void pictureBox_MouseMove(object sender, MouseEventArgs e)
@@ -77,6 +88,16 @@ namespace LabCG3Turn3
                 marker.MouseUp();
             }
             Cursor = Cursors.Arrow;
+        }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            Bitmap savedBit = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            pictureBox1.DrawToBitmap(savedBit, pictureBox1.ClientRectangle);
+            savedBit.Save(@"E:\123.bmp");
+            savedBit.Dispose();
+            isDrawed = true;
+            this.Refresh();
         }
     }
 }
