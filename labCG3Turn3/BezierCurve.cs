@@ -11,7 +11,7 @@ namespace LabCG3Turn3
         /// <summary>
         /// Количество точек для отрисовки.
         /// </summary>
-        private const int N = 40;
+        private const int N = 4000;
 
         /// <summary>
         /// Опорные точки.
@@ -111,7 +111,7 @@ namespace LabCG3Turn3
         /// <param name="g">График для отрисовки</param>
         public void Draw(Graphics g)
         {
-            Pen pen = new Pen(Color.Black, 2f);
+            Pen pen = new Pen(Color.Black);
             g.DrawLines(pen, DrawingPoints);
         }
     }

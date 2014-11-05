@@ -55,10 +55,13 @@ namespace LabCG3Turn3
             if (isDrawed)
             {
                 Fill.Filling(e.Graphics, null, 300 - 150 / 2, 200);
-                Fill.Filling(e.Graphics, null, 300, 250);
+                //Fill.Filling(e.Graphics, null, 300, 250);
                 Fill.Filling(e.Graphics, null, 320, 240);
+                var bittmp = new Bitmap("123.bmp");
+                e.Graphics.DrawImage(bittmp, 0, 0, bittmp.Width, bittmp.Height);
             }
             isDrawed = false;
+            
         }
 
         private void pictureBox_MouseMove(object sender, MouseEventArgs e)
@@ -94,7 +97,7 @@ namespace LabCG3Turn3
         {
             Bitmap savedBit = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             pictureBox1.DrawToBitmap(savedBit, pictureBox1.ClientRectangle);
-            savedBit.Save(@"E:\123.bmp");
+            savedBit.Save("123.bmp");
             savedBit.Dispose();
             isDrawed = true;
             this.Refresh();

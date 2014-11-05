@@ -17,7 +17,7 @@ namespace labCG3Turn3
             var rigthX = x + 1;
             var leftX = x - 1;
             {
-                var bitmap = new Bitmap(@"E:\123.bmp");
+                var bitmap = new Bitmap("123.bmp");
                 bitmap.SetPixel(x, y, Color.Black);
                 if (leftX < 20) leftX = 20;
                 var color = bitmap.GetPixel(leftX, y);
@@ -33,7 +33,7 @@ namespace labCG3Turn3
                     bitmap.SetPixel(rigthX, y, Color.Black);
                     rigthX++;
                 }
-                bitmap.Save(@"E:\12355.bmp");
+                bitmap.Save("12355.bmp");
                 bitmap.Dispose();
             }
             var i = leftX;
@@ -41,9 +41,8 @@ namespace labCG3Turn3
             var drawUp = false;
             var drawDown = false;
             {
-                var bittmp = new Bitmap(@"E:\12355.bmp");
-                bittmp.Save(@"E:\123.bmp");
-                g.DrawImage(bittmp, 0, 0, bittmp.Width, bittmp.Height);
+                var bittmp = new Bitmap("12355.bmp");
+                bittmp.Save("123.bmp");
                 for (; i <= rigthX; i++)
                 {
                     if (y > 10 && y < 400 && bittmp.GetPixel(i, y + 1) == bittmp.GetPixel(10, 10))
